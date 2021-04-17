@@ -33,7 +33,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "components",
+  "name": "@mylibs/components",
   "author": "Apollo Tang",
   "module": "dist/components.esm.js",
   "size-limit": [

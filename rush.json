@@ -436,6 +436,10 @@
        */
       // "versionPolicyName": ""
     },
+    {
+      "packageName": "@mylibs/components",
+      "projectFolder": "libs/components",
+    },
 
     // {
     //   "packageName": "my-controls",
