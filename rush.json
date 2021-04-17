@@ -389,16 +389,16 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
-    // {
-    //   /**
-    //    * The NPM package name of the project (must match package.json)
-    //    */
-    //   "packageName": "my-app",
-    // 
-    //   /**
-    //    * The path to the project folder, relative to the rush.json config file.
-    //    */
-    //   "projectFolder": "apps/my-app",
+    {
+       /**
+        * The NPM package name of the project (must match package.json)
+        */
+       "packageName": "my-app",
+     
+       /**
+        * The path to the project folder, relative to the rush.json config file.
+        */
+       "projectFolder": "apps/my-app",
     // 
     //   /**
     //    * An optional category for usage in the "browser-approved-packages.json"
@@ -444,7 +444,7 @@
     //    * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
     //    */
     //   // "versionPolicyName": ""
-    // },
+    },
     // 
     // {
     //   "packageName": "my-controls",
