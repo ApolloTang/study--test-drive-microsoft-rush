@@ -437,8 +437,16 @@
       // "versionPolicyName": ""
     },
     {
+      "packageName": "my-app2",
+      "projectFolder": "apps/my-app2",
+    },
+    {
       "packageName": "@mylibs/components",
       "projectFolder": "libs/components",
+    },
+    {
+      "packageName": "@mylibs/ui--button",
+      "projectFolder": "libs/button",
     },
 
     // {
