@@ -5,9 +5,9 @@
   "module": "src/index.js",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16"
   },
   "dependencies": {
+    "react": "^16",
     "core-js": "^3.0.0",
     "styled-components": ">=2"
   },
