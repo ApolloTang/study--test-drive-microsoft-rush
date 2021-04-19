@@ -441,6 +441,10 @@
       "projectFolder": "apps/my-app2",
     },
     {
+      "packageName": "web3",
+      "projectFolder": "apps/web3",
+    },
+    {
       "packageName": "@mylibs/components",
       "projectFolder": "libs/components",
     },
@@ -448,7 +452,10 @@
       "packageName": "@mylibs/ui--button",
       "projectFolder": "libs/button",
     },
-
+    {
+      "packageName": "@mylibs/ui--button2",
+      "projectFolder": "libs/button2",
+    },
     // {
     //   "packageName": "my-controls",
     //   "projectFolder": "libraries/my-controls",
