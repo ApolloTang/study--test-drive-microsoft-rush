@@ -5,9 +5,11 @@
   "module": "src/index.tsx",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.12.0",
-    "styled-components": "^5.0.1",
-    "core-js": "^3.0.0"
+  },
+  "dependencies": {
+    "react": "^16",
+    "core-js": "^3.0.0",
+    "styled-components": ">=2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -15,7 +17,7 @@
     "@babel/preset-env": "^7.8.6",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.12.1",
-    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-styled-components": "*",
     "@types/styled-components": "*",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5"

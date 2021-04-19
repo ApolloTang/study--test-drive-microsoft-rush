@@ -12,6 +12,7 @@ const StyledButton = styled.button`
 `;
 
 const Button = ({children}:any) => <div>
+    <h1>dsfad</h1>
   <StyledButton>
     {children}
   </StyledButton>
