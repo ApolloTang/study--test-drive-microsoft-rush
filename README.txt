@@ -11,8 +11,14 @@ Create a new rush repo:
 Reset everything
 ----------------
 
-  $ rush unlink         # I think this remove pnpm symlink for all dependencies.
+  $ rush unlink         # I think this remove pnpm symlink for
+                        #   all dependencies (not supported w
+                        #   pnpp workspace, use rush purge instead).
+
   $ rush purge          # I think this remove cache for incremental build.
+                        #   remove all node_modules, shrinkwrap-deps.json,
+                        #   remove common/temp
+
   $ rush update --full  # This analysis semVer and produce a new dependency graph for schrinkwraping.
 
   I think "rush update --purge"
