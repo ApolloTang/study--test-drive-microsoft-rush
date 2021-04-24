@@ -4,11 +4,12 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
   "dependencies": {
-    "react": "^16.13.0",
     "core-js": "^3.0.0",
     "styled-components": "^5.0.1",
-    "react-dom": "^16.13.0",
     "@types/react": "^16",
     "@types/react-dom": "^16",
     "babel-loader": "8.1.0",
@@ -16,6 +17,7 @@
     "webpack-dev-server": "3.11.1"
   },
   "devDependencies": {
+    "react": ">=16.8.0",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
