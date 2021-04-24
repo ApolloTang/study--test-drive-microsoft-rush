@@ -1,33 +1,61 @@
-# testdrive-rush
+Command cheat sheet
+===================
 
 
-$ rush init
+Create a new rush repo:
+-----------------------
+  $ rush init
+
 
 
 Reset everything
 ----------------
 
-  $ rush unlink
-  $ rush purge
-  $ rush update --full
+  $ rush unlink         # I think this remove pnpm symlink for all dependencies.
+  $ rush purge          # I think this remove cache for incremental build.
+  $ rush update --full  # This analysis semVer and produce a new dependency graph for schrinkwraping.
 
   I think "rush update --purge"
-  is same as "rush purge" + "rush update -full"
+  is same as "rush purge" + "rush update"
 
 
-Install all package and create linkages
-----------------------------------------
+
+Update monorepo to new configuration:
+-------------------------------------
 
   $ rush update
-  run this when ever any of the following has changed:
+
+  Run this whenever any of the following has changed:
+
     - package.json
     - common/config/*
+
+  These change b/c you have either changed it manual or you have
+  git pulled changes from github.
+
+  It analyses changed in configuration and patch the scrinkwrap
+  with minimum requirements that satisfy new change in dependecies
+  spec and configuration.
+
+  Unlike "rush install" which only install without writing any
+  patch to shrinkwrap and configurations.
+
+
+
+Install according to current monorepo's specification:
+------------------------------------------------------
+
+  Useful for CI and deployment.
+
+  $ rush install
+
 
 
 Make sure all dependencies are using the same version
 -----------------------------------------------------
 
   $ rush check
+
 
 
 Run build command in all project or library
@@ -38,6 +66,7 @@ Run build command in all project or library
   $ rush rebuild (build everything)
 
 
+
 Run a npm script in a project or library:
 -----------------------------------------
 
@@ -45,11 +74,16 @@ Run a npm script in a project or library:
   $ rushx <name of script>
 
 
+
 Add a npm package to a project or library
 -----------------------------------------
 
   $ cd <project or library>
-  $ rush add --package @mylibs/components
+  $ rush add [--dev] -m --package "example@^1.2.3"
+
+  -m : Make sure same version is install throughout
+       the monorepo.
+
 
 
 Remove a npm package to a project or library
@@ -58,14 +92,27 @@ Remove a npm package to a project or library
   Manually deleting the library from package.json and then run:
   "rush update" or "rush update --full"
 
+  Strangly there isn't a rush remove command.
   Ref: https://github.com/microsoft/rushstack/issues/1457
 
 
 Deploying
-----------
-  $ cd <root>
-  $ rush init-deploy -p my-app
-  $ rush deploy --overwrite -p my-app
+==========
+
+  Create a deployment artifact:
+  -----------------------------
+
+    $ rush deploy -p my-app
+
+
+  Initializing deployment configuration:
+  --------------------------------------
+
+    $ rush init-deploy -p my-app
+    $ rush deploy --overwrite -p my-app  # delete the existing deployment configuration for my-app
+
+
+
 
 
 
