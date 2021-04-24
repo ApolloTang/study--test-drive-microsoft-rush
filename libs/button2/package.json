@@ -4,12 +4,14 @@
   "main": "src/index.tsx",
   "module": "src/index.tsx",
   "license": "MIT",
-  "peerDependencies": {
-  },
   "dependencies": {
-    "react": "^16",
+    "react": "^16.13.0",
     "core-js": "^3.0.0",
-    "styled-components": ">=2"
+    "styled-components": "^5.0.1",
+    "react-dom": "^16.13.0",
+    "babel-loader": "8.1.0",
+    "webpack": "4.44.2",
+    "webpack-dev-server": "3.11.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -19,8 +21,8 @@
     "@babel/preset-typescript": "^7.12.1",
     "babel-plugin-styled-components": "*",
     "@types/styled-components": "*",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5"
+    "@types/react": "^16",
+    "@types/react-dom": "^16"
   },
   "scripts": {
     "build": "babel src -d lib --ignore **/*.story.js,**/*.test.js",

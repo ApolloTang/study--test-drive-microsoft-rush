@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.8.6",
     "@babel/preset-react": "^7.8.3",
     "@types/styled-components": "*",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "8.1.0",
     "css-loader": "^3.4.2",
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
@@ -29,10 +29,10 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "style-loader": "^1.1.3",
-    "webpack": "^4.41.6",
+    "webpack": "4.44.2",
     "webpack-cli": "^3.3.11",
     "webpack-config-utils": "^2.3.1",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "3.11.1"
   },
   "dependencies": {
     "@mylibs/ui--button": "workspace:*",
@@ -41,7 +41,9 @@
     "react-dom": "^16.13.0",
     "react-loadable": "^5.5.0",
     "regenerator-runtime": "^0.13.3",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "@types/react": "^16",
+    "@types/react-dom": "^16"
   },
   "scripts": {
     "dev": "webpack-dev-server --progress --env.mode=\"development\"",
