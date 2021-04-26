@@ -1,22 +1,27 @@
-# Webpack react boilerplate
+# Demo on how to deploy
 
-Install:
 ```
-$ yarn ## install
+% cd testdrive-rush
+
+% rush deploy -p web3                         # this produce a deploy folder at testdrive-rush/common/deploy
+
+% mkdir -p ~/Desktop/deploy/
+
+% cp  -a ./common/deploy/ ~/Desktop/deploy/   # must copy with "-a" to preserver hard link 
+
+% cd  ~/Desktop/deploy/
+
+% pnpm i -r                                   # so we install here so that we have devDendencies.
+
+% cd apps/web3
+
+% pnpm build 
+
+% cd build/
+
+% http-server 
 ```
 
-Run development server (port 9090):
-```
-$ yarn dev
-```
-Build for distribution (destination folder: /dist/):
-```
-$ yarn build
-```
-Build then start deploy server at port 8080:
-```
-$ yarn start
-```
 
-Works with npm too!
+
 
