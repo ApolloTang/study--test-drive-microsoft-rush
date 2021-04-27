@@ -52,6 +52,7 @@
     "build:clean": "rimraf dist",
     "start": "node server.js",
     "prebuild": "yarn build:clean",
-    "prestart": "npm-run-all build"
+    "prestart": "npm-run-all build",
+    "my-custom-incremental-command": "echo 'XXXXXX output of my-custom-incremental-command XXXXXXXXXXX'"
   }
 }
