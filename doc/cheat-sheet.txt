@@ -1,6 +1,10 @@
 Command cheat sheet
 ===================
 
+Ref:
+  https://rushjs.io/pages/intro/welcome/
+  https://pnpm.io/motivation
+
 
 Create a new rush repo:
 -----------------------
