@@ -97,6 +97,7 @@ importers:
   ../../apps/web3:
     dependencies:
       '@mylibs/ui--button2': 'link:../../libs/button2'
+      '@mylibs/ui--react-cat-image': 'link:../../libs/ui--react-cat-image'
       core-js: 3.11.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -137,6 +138,7 @@ importers:
       '@babel/preset-react': ^7.8.3
       '@babel/preset-typescript': ^7.12.1
       '@mylibs/ui--button2': 'workspace:*'
+      '@mylibs/ui--react-cat-image': 'workspace:*'
       '@types/react': ^16
       '@types/react-dom': ^16
       '@types/styled-components': '*'
@@ -254,6 +256,40 @@ importers:
       tsdx: ^0.14.1
       tslib: ^2.2.0
       typescript: ^4.2.4
+      webpack: 4.44.2
+      webpack-dev-server: 3.11.1
+  ../../libs/ui--react-cat-image:
+    dependencies:
+      babel-loader: 8.1.0_0c9ed85c987bca43d65931123ef87b6c
+      core-js: 3.11.0
+      styled-components: 5.2.3_2830938537a20c678fcf0e27fe33bcfd
+      webpack: 4.44.2_webpack@4.44.2
+      webpack-dev-server: 3.11.1_webpack@4.44.2
+    devDependencies:
+      '@babel/cli': 7.13.16_@babel+core@7.13.16
+      '@babel/core': 7.13.16_@babel+core@7.13.16
+      '@babel/preset-env': 7.13.15_@babel+core@7.13.16
+      '@babel/preset-react': 7.13.13_@babel+core@7.13.16
+      '@babel/preset-typescript': 7.13.0_@babel+core@7.13.16
+      '@types/react': 16.14.5
+      '@types/react-dom': 16.9.12
+      '@types/styled-components': 5.1.9
+      babel-plugin-styled-components: 1.12.0_styled-components@5.2.3
+      react: 17.0.2
+    specifiers:
+      '@babel/cli': ^7.8.4
+      '@babel/core': ^7.8.6
+      '@babel/preset-env': ^7.8.6
+      '@babel/preset-react': ^7.8.3
+      '@babel/preset-typescript': ^7.12.1
+      '@types/react': ^16
+      '@types/react-dom': ^16
+      '@types/styled-components': '*'
+      babel-loader: 8.1.0
+      babel-plugin-styled-components: '*'
+      core-js: ^3.0.0
+      react: '>=16.8.0'
+      styled-components: ^5.0.1
       webpack: 4.44.2
       webpack-dev-server: 3.11.1
 lockfileVersion: 5.1
@@ -5935,19 +5971,6 @@ packages:
         optional: true
     resolution:
       integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
-  /debug/4.3.1_supports-color@6.1.0:
-    dependencies:
-      ms: 2.1.2
-      supports-color: 6.1.0
-    engines:
-      node: '>=6.0'
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-    resolution:
-      integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
   /decamelize/1.2.0:
     engines:
       node: '>=0.10.0'
@@ -7409,7 +7432,7 @@ packages:
       integrity: sha512-3Z4XhFZ3992uIq0XOqb9AreonueSYphE6oYbpt5+3u06JWklbsPkNv3ZKkP9Bz/r+1MWCaMoSQ28P85+1Yc77w==
   /follow-redirects/1.13.3_debug@4.3.1:
     dependencies:
-      debug: 4.3.1_supports-color@6.1.0
+      debug: 4.3.1
     engines:
       node: '>=4.0'
     peerDependencies:
@@ -13421,29 +13444,25 @@ packages:
   /spdx-license-ids/3.0.7:
     resolution:
       integrity: sha512-U+MTEOO0AiDzxwFvoa4JVnMV6mZlJKk2sBLt90s7G0Gd0Mlknc7kxEn3nuDPNZRta7O2uy8oLcZLVT+4sqNZHQ==
-  /spdy-transport/3.0.0_supports-color@6.1.0:
+  /spdy-transport/3.0.0:
     dependencies:
-      debug: 4.3.1_supports-color@6.1.0
+      debug: 4.3.1
       detect-node: 2.0.5
       hpack.js: 2.1.6
       obuf: 1.1.2
       readable-stream: 3.6.0
       wbuf: 1.7.3
-    peerDependencies:
-      supports-color: '*'
     resolution:
       integrity: sha512-hsLVFE5SjA6TCisWeJXFKniGGOpBgMLmerfO2aCyCU5s7nJ/rpAepqmFifv/GCbSbueEeAJJnmSQ2rKC/g8Fcw==
-  /spdy/4.0.2_supports-color@6.1.0:
+  /spdy/4.0.2:
     dependencies:
-      debug: 4.3.1_supports-color@6.1.0
+      debug: 4.3.1
       handle-thing: 2.0.1
       http-deceiver: 1.2.7
       select-hose: 2.0.0
-      spdy-transport: 3.0.0_supports-color@6.1.0
+      spdy-transport: 3.0.0
     engines:
       node: '>=6.0.0'
-    peerDependencies:
-      supports-color: '*'
     resolution:
       integrity: sha512-r46gZQZQV+Kl9oItvl1JZZqJKGr+oEkB08A6BzkiR7593/7IbtuncXHd2YoYeTsG4157ZssMu9KYvUHLcjcDoA==
   /split-string/3.1.0:
@@ -14750,9 +14769,17 @@ packages:
       webpack: 4.x.x
     resolution:
       integrity: sha512-NVWBaz9k839ZH/sinurM+HcDvJOTXwSjYp1ku+5XKeOC03z8v5QitnK/x+lAxGXFyhdayoIf/GOpv85z3/xPag==
+  /webpack-combine-loaders/2.0.4:
+    dependencies:
+      qs: 6.7.0
+    dev: true
+    resolution:
+      integrity: sha512-5O5PYVE5tZ3I3uUm3QB7niLEJzLketl8hvAcJwa4YmwNWS/vixfVsqhtUaBciP8J4u/GwIHV52d7kkgZJFvDnw==
   /webpack-config-utils/2.3.1:
     bundledDependencies:
       - webpack-combine-loaders
+    dependencies:
+      webpack-combine-loaders: 2.0.4
     dev: true
     resolution:
       integrity: sha512-0uC5uj7sThFTePTQjfpe5Wqcbw3KSCxqswOmW96lwk2ZI2CU098rWY2ZqOVGJQYJ3hfEltmjcLNkKutw8LJAlg==
@@ -14777,7 +14804,7 @@ packages:
       chokidar: 2.1.8
       compression: 1.7.4
       connect-history-api-fallback: 1.6.0
-      debug: 4.3.1_supports-color@6.1.0
+      debug: 4.3.1
       del: 4.1.1
       express: 4.17.1
       html-entities: 1.4.0
@@ -14797,7 +14824,7 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.21
       sockjs-client: 1.5.1
-      spdy: 4.0.2_supports-color@6.1.0
+      spdy: 4.0.2
       strip-ansi: 3.0.1
       supports-color: 6.1.0
       url: 0.11.0
@@ -14826,7 +14853,7 @@ packages:
       chokidar: 2.1.8
       compression: 1.7.4
       connect-history-api-fallback: 1.6.0
-      debug: 4.3.1_supports-color@6.1.0
+      debug: 4.3.1
       del: 4.1.1
       express: 4.17.1
       html-entities: 1.4.0
@@ -14846,7 +14873,7 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.21
       sockjs-client: 1.5.1
-      spdy: 4.0.2_supports-color@6.1.0
+      spdy: 4.0.2
       strip-ansi: 3.0.1
       supports-color: 6.1.0
       url: 0.11.0
@@ -15345,3 +15372,4 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+registry: ''
