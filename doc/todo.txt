@@ -1,4 +1,4 @@
-install typescript from npm registry
+install typescript
 get typecheck to work
 migrate font**.js to font**.tsx?
 add webpack path alias
@@ -7,7 +7,9 @@ move fontcheck to external module (share)
 move font to external module (share)
 throughtly test typescript ide functionality
 
-todo items below is complated:
-``````````````````````````````
+todo items below is done:
+`````````````````````````
 Get frontloading to work
+build a ui component that can handle images
+
 
