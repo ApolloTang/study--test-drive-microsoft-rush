@@ -3,21 +3,19 @@
 ```
 % cd testdrive-rush
 
-% rush deploy -p web3                        # this produce a deploy folder at testdrive-rush/common/deploy
+% rush deploy -p web3 --overwrite            # this produce a deploy folder at testdrive-rush/common/deploy
 
-% cp -a ./common/deploy/ ~/Desktop/deploy/   # must copy with "-a" to preserver hard link 
+% cp -a ./common/deploy/ ~/Desktop/deploy/   # must copy with `-a` to preserver hard link, `copy -r` will not work.
 
 % cd ~/Desktop/deploy/
 
-% pnpm i -r                                  # We run install here so that we have devDendencies.
-
 % cd apps/web3
 
-% pnpm build 
+% pnpm build
 
 % cd build/
 
-% http-server 
+% http-server
 ```
 
 
