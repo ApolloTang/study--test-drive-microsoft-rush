@@ -4,9 +4,6 @@
   "main": "src/index.tsx",
   "module": "src/index.tsx",
   "license": "MIT",
-  "engines": {
-    "node": "^15"
-  },
   "peerDependencies": {
     "react": ">=16.8.0"
   },
